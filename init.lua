@@ -12,8 +12,8 @@ vim.g.have_nerd_font = true
 
 -- Make line numbers default
 vim.o.number = true
--- Line relative number to jump up and down quickly
-vim.o.relativenumber = true
+-- Line relative number to jump up and down quickly, disabled in favor of just jumping to global line
+vim.o.relativenumber = false
 
 -- Enable mouse mode, useful for resizing splits
 vim.o.mouse = "a"

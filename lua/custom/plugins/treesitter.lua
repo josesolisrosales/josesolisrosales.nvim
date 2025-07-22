@@ -27,6 +27,7 @@ return {
 			"markdown",
 			"markdown_inline",
 			"query",
+			"yaml",
 		},
 		auto_install = true,
 		highlight = {

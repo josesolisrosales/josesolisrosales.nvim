@@ -130,10 +130,8 @@ return {
 
 			-- Your language servers
 			local servers = {
-				gopls = {},
 				tflint = {},
 				pyright = {},
-				rust_analyzer = {},
 				ts_ls = {},
 				html = { filetypes = { "html", "twig", "hbs" } },
 				helm_ls = {},
