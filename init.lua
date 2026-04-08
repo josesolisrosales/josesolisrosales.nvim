@@ -209,10 +209,10 @@ function TermToggle(height)
 			end,
 		})
 		term_win = vim.api.nvim_get_current_win()
-		vim.api.nvim_buf_set_option(term_buf, "buflisted", false)
-		vim.api.nvim_win_set_option(0, "number", false)
-		vim.api.nvim_win_set_option(0, "relativenumber", false)
-		vim.api.nvim_win_set_option(0, "signcolumn", "no")
+		vim.bo[term_buf].buflisted = false
+		vim.wo[0].number = false
+		vim.wo[0].relativenumber = false
+		vim.wo[0].signcolumn = "no"
 	end
 	-- Enter Insert Mode by default
 	vim.cmd("startinsert!")

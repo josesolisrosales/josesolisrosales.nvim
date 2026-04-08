@@ -39,14 +39,7 @@ return {
 					map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 					map("grt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
 
-					-- Your existing keymaps (kept for compatibility)
-					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame (legacy)")
-					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction (legacy)")
-					map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition (legacy)")
-					map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences (legacy)")
-					map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation (legacy)")
-					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition (legacy)")
-					map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+						map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
 					map(
 						"<leader>ws",
 						require("telescope.builtin").lsp_dynamic_workspace_symbols,
@@ -62,7 +55,6 @@ return {
 					map("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
 
 					-- Lesser used LSP functionality
-					map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration (legacy)")
 					map("<leader>wa", vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
 					map("<leader>wr", vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove Folder")
 					map("<leader>wl", function()
@@ -135,6 +127,15 @@ return {
 				ts_ls = {},
 				html = { filetypes = { "html", "twig", "hbs" } },
 				helm_ls = {},
+				rust_analyzer = {
+					settings = {
+						["rust-analyzer"] = {
+							check = {
+								command = "clippy",
+							},
+						},
+					},
+				},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -153,6 +154,11 @@ return {
 				"stylua", -- Used to format Lua code
 				"prettier", -- Used to format JS/TS
 				"black", -- Used to format Python
+				"rustfmt", -- Used to format Rust code
+				"markdownlint", -- Used to lint Markdown
+				"pylint", -- Used to lint Python
+				"eslint", -- Used to lint JS/TS
+				"golangci-lint", -- Used to lint Go
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
