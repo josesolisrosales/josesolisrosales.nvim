@@ -9,7 +9,18 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		require("neo-tree").setup({})
+		require("neo-tree").setup({
+			window = {
+				mappings = {
+					["J"] = function()
+						vim.cmd("normal! 10j")
+					end,
+					["K"] = function()
+						vim.cmd("normal! 10k")
+					end,
+				},
+			},
+		})
 
 		-- Your custom Neo-tree keymaps
 		vim.keymap.set(

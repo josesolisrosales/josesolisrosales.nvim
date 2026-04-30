@@ -127,15 +127,6 @@ return {
 				ts_ls = {},
 				html = { filetypes = { "html", "twig", "hbs" } },
 				helm_ls = {},
-				rust_analyzer = {
-					settings = {
-						["rust-analyzer"] = {
-							check = {
-								command = "clippy",
-							},
-						},
-					},
-				},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -154,7 +145,6 @@ return {
 				"stylua", -- Used to format Lua code
 				"prettier", -- Used to format JS/TS
 				"black", -- Used to format Python
-				"rustfmt", -- Used to format Rust code
 				"markdownlint", -- Used to lint Markdown
 				"pylint", -- Used to lint Python
 				"eslint", -- Used to lint JS/TS

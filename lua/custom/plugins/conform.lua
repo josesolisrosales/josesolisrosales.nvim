@@ -34,7 +34,6 @@ return {
 			go = { "gofmt" },
 			terraform = { "terraform_fmt" },
 			hcl = { "terraform_fmt" },
-			rust = { "rustfmt" },
 		},
 	},
 }

@@ -15,7 +15,6 @@ return {
 			"go",
 			"lua",
 			"python",
-			"rust",
 			"tsx",
 			"javascript",
 			"typescript",
